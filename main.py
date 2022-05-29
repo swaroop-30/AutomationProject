@@ -1,10 +1,10 @@
 import time
 import random
+import os.path
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
-
 
 def automate():
 
@@ -15,10 +15,10 @@ def automate():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
+
+
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     #initialize chrome webdriver
-
-
 
 # Open the e-commerce URL and maximize the window
 driver.get('http://tutorialsninja.com/demo/')
